@@ -156,20 +156,35 @@ st.pyplot(fig)
 
 st.subheader("Plano de fase")
 
-fig2, ax2 = plt.subplots(figsize=(6,6))
+fig, ax = plt.subplots(figsize=(7,7))
 
-ax2.plot(
+ax.plot(
     lista_presas,
-    lista_predadores
+    lista_predadores,
+    linewidth=2
 )
 
-ax2.set_xlabel("Presas")
+ax.scatter(
+    lista_presas[0],
+    lista_predadores[0],
+    s=100,
+    label="Início"
+)
 
-ax2.set_ylabel("Predadores")
+ax.scatter(
+    lista_presas[-1],
+    lista_predadores[-1],
+    s=100,
+    label="Fim"
+)
 
-ax2.grid()
+ax.set_xlabel("Presas")
+ax.set_ylabel("Predadores")
+ax.set_title("Plano de fase")
+ax.grid()
+ax.legend()
 
-st.pyplot(fig2)
+st.pyplot(fig)
 
 # -------------------------
 # TABELA
