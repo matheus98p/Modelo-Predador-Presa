@@ -71,7 +71,7 @@ def lotka_volterra(t, z):
     x, y = z
 
     dxdt = alpha*x - beta*x*y
-    dydt = delta*x*y - gamma*y
+    dydt = - gamma*y + delta*x*y
 
     return [dxdt, dydt]
 
