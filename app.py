@@ -173,5 +173,5 @@ st.latex(r"""
 """)
 
 st.latex(r"""
-\frac{dy}{dt} = \delta xy - \gamma y
+\frac{dy}{dt} = - \gamma y + \delta xy
 """)
